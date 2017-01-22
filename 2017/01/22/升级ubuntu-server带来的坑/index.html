@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="CindyTech"/>
+        <meta property="og:title" content="升级ubuntu server带来的坑"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Linux - CindyTech</title>
+    <title>升级ubuntu server带来的坑 - CindyTech</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -119,9 +119,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -129,32 +127,54 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">#Linux</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2017/01/22/升级ubuntu-server带来的坑/">
-        <span class="archive-date">
-            Jan 2017
-        </span>
-        升级ubuntu server带来的坑
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/01/22/升级ubuntu-server带来的坑/">
+                升级ubuntu server带来的坑
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-01-22</span>
+            
+            <a href="#disqus_thread" class="comments">Kommentare</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>公司某人手贱，改动了ubuntu的引导，然后灾难来了，系统进不了了，各种报错，为了填这个坑，经历了九九八十一难，最终他成功了，但是却把14.04服务器版ubuntu升级到了16.04，然后我的灾难来了，cuda加速器不再好用，不知什么问题的我慌忙之中误把GTX1080显卡驱动卸载了，之后，就一直循环性的遇到一个问题：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">Building initial module <span class="keyword">for</span> <span class="number">4.4</span><span class="number">.0</span><span class="number">-59</span>-generic</div><div class="line">ERROR: Cannot create report: [Errno <span class="number">17</span>] File exists: <span class="string">'/var/crash/virtualbox-dkms.0.crash'</span></div><div class="line">Error! Bad <span class="keyword">return</span> status <span class="keyword">for</span> module build on kernel: <span class="number">4.4</span><span class="number">.0</span><span class="number">-59</span>-generic (x86_64)</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<p>搜索了很久，才发现原来是GCC的问题，我重新安装了GCC，然后再安装GTX1080显卡驱动，重新安装cuda，cudnn,一切顺利。<br>回顾一下，现在也不知道这个问题的解决办法是什么原理。<br>虽然这个结果非常简单，但是却是一步步走过来的，中间各种法儿都试了，重装系统的心都有了，如果不是重装系统遇到了问题，就真的重装系统了。</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Linux/">#Linux</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2017/01/19/linux命令记忆库/">
-        <span class="archive-date">
-            Jan 2017
-        </span>
-        linux命令记忆库
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
 
